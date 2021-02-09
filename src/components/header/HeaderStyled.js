@@ -23,7 +23,7 @@ const Wrapper = styled.div`
     font-weight: 500;
     font-size: 20px;
     line-height: 1.63;
-    color: #696969;
+    color: #008080;
     text-decoration: none;
     text-transform: uppercase;
   }

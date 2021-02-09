@@ -1,8 +1,9 @@
-import formReducer from "./reducers/formReducer";
+//import { formReducer } from "./reducers/formReducer";
 import { configureStore } from "@reduxjs/toolkit";
+import { rootReducer } from "./reducers/rootReducer";
 
 const store = configureStore({
-  reducer: formReducer,
+  reducer: rootReducer,
 });
 
 export { store };

@@ -81,6 +81,7 @@ const ContactForm = () => {
             type="text"
             value={state.name}
             name="name"
+            placeholder="Enter name"
             onChange={onHandleChange}
           />
         </label>
@@ -91,6 +92,7 @@ const ContactForm = () => {
             type="text"
             value={state.number}
             name="number"
+            placeholder="Enter number"
             onChange={onHandleChange}
           />
         </label>

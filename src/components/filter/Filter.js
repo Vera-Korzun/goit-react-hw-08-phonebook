@@ -23,6 +23,7 @@ const Filter = () => {
             type="text"
             name="filter"
             value={filter}
+            placeholder="Start typing name"
             onChange={onChangeFilter}
           />
         </label>

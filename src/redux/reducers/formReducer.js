@@ -70,4 +70,4 @@ const formReducer = createReducer(
   }
 );
 
-export default formReducer;
+export { formReducer };

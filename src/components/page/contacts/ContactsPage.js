@@ -11,6 +11,7 @@ import ContactsStyled from "./ContactsPageStyled";
 const ContactsPage = () => {
   const contacts = useSelector(getContacts);
   const isLoading = useSelector(loading);
+
   return (
     <ContactsStyled>
       {isLoading && <LoaderSpinner />}

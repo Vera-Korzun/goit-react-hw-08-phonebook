@@ -11,9 +11,20 @@ const mainRoutes = [
       )
     ),
   },
+
+  {
+    path: "/contacts",
+    name: "Contacts",
+    exact: false,
+    component: lazy(() =>
+      import(
+        "../components/page/contacts/ContactsPage" /* webpackChunkName: "ContactsPage"*/
+      )
+    ),
+  },
   {
     path: "/register",
-    name: "Registr",
+    name: "Registration",
     exact: false,
     component: lazy(() =>
       import(
@@ -28,16 +39,6 @@ const mainRoutes = [
     component: lazy(() =>
       import(
         "../components/page/login/LoginPage" /* webpackChunkName: "LoginPage"*/
-      )
-    ),
-  },
-  {
-    path: "/contacts",
-    name: "Contacts",
-    exact: false,
-    component: lazy(() =>
-      import(
-        "../components/page/contacts/ContactsPage" /* webpackChunkName: "ContactsPage"*/
       )
     ),
   },
