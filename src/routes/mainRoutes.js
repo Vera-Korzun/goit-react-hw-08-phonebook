@@ -10,6 +10,8 @@ const mainRoutes = [
         "../components/page/home/HomePage" /* webpackChunkName: "HomePage"*/
       )
     ),
+    isPrivate: false,
+    restricted: false,
   },
 
   {
@@ -21,9 +23,11 @@ const mainRoutes = [
         "../components/page/contacts/ContactsPage" /* webpackChunkName: "ContactsPage"*/
       )
     ),
+    isPrivate: true,
+    restricted: false,
   },
   {
-    path: "/register",
+    path: "/signup",
     name: "Registration",
     exact: false,
     component: lazy(() =>
@@ -31,9 +35,11 @@ const mainRoutes = [
         "../components/page/register/RegistrPage" /* webpackChunkName: "RegistrPage"*/
       )
     ),
+    isPrivate: false,
+    restricted: true,
   },
   {
-    path: "/login",
+    path: "/signin",
     name: "Login",
     exact: false,
     component: lazy(() =>
@@ -41,6 +47,8 @@ const mainRoutes = [
         "../components/page/login/LoginPage" /* webpackChunkName: "LoginPage"*/
       )
     ),
+    isPrivate: false,
+    restricted: true,
   },
 ];
 

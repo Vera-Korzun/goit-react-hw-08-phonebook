@@ -11,17 +11,12 @@ import {
   signOutError,
 } from "../actions/authActions";
 
-// import {
-//   SETERROR,
-//   SETLOADING,
-//   SIGNIN,
-//   SIGNOUT,
-//   SIGNUP,
-// } from "../constants/authConstants";
-
 const initialState = {
   email: "",
-  token: "",
+  idToken: "",
+  refreshToken: "",
+  isAuth: false,
+  //localId: "",
   error: "",
 };
 const authReducer = createReducer(
@@ -33,58 +28,46 @@ const authReducer = createReducer(
     }),
     [signUpSuccess]: (state, action) => ({
       ...state,
+      email: action.payload.email,
+      idToken: action.payload.idToken,
+      refreshToken: action.payload.refreshToken,
+      isAuth: true,
+      //localId: action.payload.localId,
       isloading: false,
     }),
     [signUpError]: (state, action) => ({
       ...state,
       error: action.payload,
     }),
-
     [signInRequest]: (state, action) => ({
       ...state,
       isloading: true,
     }),
     [signInSuccess]: (state, action) => ({
       ...state,
+      email: action.payload.email,
+      idToken: action.payload.idToken,
+      refreshToken: action.payload.refreshToken,
+      isAuth: true,
+      //localId: action.payload.localId,
       isloading: false,
     }),
     [signInError]: (state, action) => ({
       ...state,
       error: action.payload,
     }),
-    [signOutRequest]: (state, action) => ({
-      ...state,
-      isloading: true,
+    // [signOutRequest]: (state, action) => ({
+    //   ...state,
+    //   isloading: true,
+    // }),
+    [signOutSuccess]: () => ({
+      ...initialState,
     }),
-    [signOutSuccess]: (state, action) => ({
-      ...state,
-      isloading: false,
-    }),
-    [signOutError]: (state, action) => ({
-      ...state,
-      error: action.payload,
-    }),
+    // [signOutError]: (state, action) => ({
+    //   ...state,
+    //   error: action.payload,
+    // }),
   }
 );
 
 export { authReducer };
-
-// const authReducer = (state = { ...initialState }, action) => {
-//   switch (type) {
-//     case SIGNUP:
-//       return state;
-//     case SIGNIN:
-//       return state;
-//     case SIGNOUT:
-//       return state;
-//     case SETLOADING:
-//       return { ...state, isloading: !state.isloading };
-//     case SETERROR:
-//       return { ...state, error: action.payload };
-
-//     default:
-//       return state;
-//   }
-// };
-
-//export { authReducer };

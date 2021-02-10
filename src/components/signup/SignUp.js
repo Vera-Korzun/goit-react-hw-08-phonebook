@@ -19,9 +19,8 @@ const SignUp = () => {
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    console.log("state", state);
     dispatch(signUpOperation(state));
-    //setState(initialState);
+    setState(initialState);
   };
 
   return (

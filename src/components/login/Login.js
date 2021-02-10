@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { signInOperation } from "../../redux/operations/authOperations";
 import LoginStyled from "./LoginStyled";
 
 const initialState = {
@@ -7,6 +9,7 @@ const initialState = {
 };
 
 const Login = () => {
+  const dispatch = useDispatch();
   const [state, setState] = useState({ ...initialState });
 
   const onHandleChange = (e) => {
@@ -16,7 +19,8 @@ const Login = () => {
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    //console.log("state", state);
+    dispatch(signInOperation(state));
+    setState(initialState);
   };
   return (
     <LoginStyled>
