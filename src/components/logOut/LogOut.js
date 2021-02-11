@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { signOutAction } from "../../redux/actions/formActions";
 //import { signOutSuccess } from "../../redux/actions/authActions";
 import { signOutOperation } from "../../redux/operations/authOperations";
 import LogOutStyled from "./LogOutStyled";
@@ -9,6 +10,7 @@ const LogOut = () => {
 
   const onLogOutClick = () => {
     dispatch(signOutOperation());
+    dispatch(signOutAction());
   };
 
   return (

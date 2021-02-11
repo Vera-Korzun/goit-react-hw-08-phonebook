@@ -14,7 +14,7 @@ const ContactsPage = () => {
 
   return (
     <ContactsStyled>
-      {/* {isLoading && <LoaderSpinner />} */}
+      {isLoading && <LoaderSpinner />}
       {/* <LoaderSpinner /> */}
       <CSSTransition in={true} timeout={500} appear={true} classNames="logo">
         <h2 className="phonebook-title">PhoneBook</h2>

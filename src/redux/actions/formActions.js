@@ -14,6 +14,8 @@ const deleteContactError = createAction("@contacts/deleteContactError");
 
 const setFilter = createAction("@contacts/setFilter");
 
+const signOutAction = createAction("@contacts/signOutAction");
+
 export {
   addNewContactRequest,
   addNewContactSuccess,
@@ -25,4 +27,5 @@ export {
   deleteContactSuccess,
   deleteContactError,
   setFilter,
+  signOutAction,
 };

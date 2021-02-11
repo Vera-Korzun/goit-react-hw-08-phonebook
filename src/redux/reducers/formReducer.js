@@ -10,6 +10,7 @@ import {
   deleteContactSuccess,
   deleteContactError,
   setFilter,
+  signOutAction,
 } from "../actions/formActions";
 
 const initialState = {
@@ -66,6 +67,9 @@ const formReducer = createReducer(
     [setFilter]: (state, action) => ({
       ...state,
       filter: action.payload,
+    }),
+    [signOutAction]: () => ({
+      ...initialState,
     }),
   }
 );
