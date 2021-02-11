@@ -33,7 +33,11 @@ const signInOperation = (user) => async (dispatch) => {
     //console.log("response", response);
     dispatch(signInSuccess(response.data));
   } catch (error) {
-    dispatch(signInError(error));
+    // if (error.response.data.error.message === "400") {
+
+    // }
+    console.log("error ===>>>>>", error.response.data.error.code);
+    dispatch(signInError(error.response.data.error.code));
   }
 };
 

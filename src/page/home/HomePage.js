@@ -1,6 +1,4 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { getAuth } from "../../redux/selectors/authSelectors";
 import HomePageStyled from "./HomePageStyled";
 
 const HomePage = () => {

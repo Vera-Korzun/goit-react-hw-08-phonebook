@@ -73,6 +73,24 @@ const Wrapper = styled.div`
     box-shadow: 7px 7px 12px 3px rgba(0, 0, 0, 0.42);
     transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  .message-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  .message-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 250ms;
+  }
+  .message-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .message-exit-active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 250ms;
+  }
 `;
 
 export default Wrapper;
