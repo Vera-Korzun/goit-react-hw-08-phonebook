@@ -16,7 +16,7 @@ const initialState = {
   idToken: "",
   refreshToken: "",
   isAuth: false,
-  //localId: "",
+  localId: "",
   error: "",
 };
 const authReducer = createReducer(
@@ -32,7 +32,7 @@ const authReducer = createReducer(
       idToken: action.payload.idToken,
       refreshToken: action.payload.refreshToken,
       isAuth: true,
-      //localId: action.payload.localId,
+      localId: action.payload.localId,
       isloading: false,
     }),
     [signUpError]: (state, action) => ({
@@ -49,7 +49,7 @@ const authReducer = createReducer(
       idToken: action.payload.idToken,
       refreshToken: action.payload.refreshToken,
       isAuth: true,
-      //localId: action.payload.localId,
+      localId: action.payload.localId,
       isloading: false,
     }),
     [signInError]: (state, action) => ({

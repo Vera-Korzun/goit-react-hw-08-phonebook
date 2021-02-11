@@ -13,11 +13,13 @@ import {
 
 const addContactOperation = (contact) => async (dispatch, getState) => {
   dispatch(addNewContactRequest());
+
+  const localId = getState().auth.localId;
   const idToken = getState().auth.idToken;
 
   try {
     const response = await axios.post(
-      `${process.env.REACT_APP_BASE_URL}/contacts.json?auth=${idToken}`,
+      `${process.env.REACT_APP_BASE_URL}/${localId}/contacts.json?auth=${idToken}`,
       contact
     );
     dispatch(addNewContactSuccess({ ...contact, id: response.data.name }));
@@ -28,11 +30,13 @@ const addContactOperation = (contact) => async (dispatch, getState) => {
 
 const getContactsOperation = () => async (dispatch, getState) => {
   dispatch(getContactsRequest());
+
+  const localId = getState().auth.localId;
   const idToken = getState().auth.idToken;
 
   try {
     const response = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/contacts.json?auth=${idToken}`
+      `${process.env.REACT_APP_BASE_URL}/${localId}/contacts.json?auth=${idToken}`
     );
     const contacts = Object.keys(response.data).map((key) => ({
       ...response.data[key],
@@ -46,12 +50,14 @@ const getContactsOperation = () => async (dispatch, getState) => {
 
 const deleteContactOperation = (id) => (dispatch, getState) => {
   dispatch(deleteContactRequest());
+
+  const localId = getState().auth.localId;
   const idToken = getState().auth.idToken;
 
   try {
     axios
       .delete(
-        `${process.env.REACT_APP_BASE_URL}/contacts/${id}.json?auth=${idToken}`
+        `${process.env.REACT_APP_BASE_URL}/${localId}/contacts/${id}.json?auth=${idToken}`
       )
       .then(() => dispatch(deleteContactSuccess(id)));
   } catch (error) {
