@@ -38,10 +38,12 @@ const getContactsOperation = () => async (dispatch, getState) => {
     const response = await axios.get(
       `${process.env.REACT_APP_BASE_URL}/${localId}/contacts.json?auth=${idToken}`
     );
-    const contacts = Object.keys(response.data).map((key) => ({
-      ...response.data[key],
-      id: key,
-    }));
+    const contacts = response.data
+      ? Object.keys(response.data).map((key) => ({
+          ...response.data[key],
+          id: key,
+        }))
+      : [];
     dispatch(getContactsSuccess(contacts));
   } catch (error) {
     dispatch(getContactsError(error));

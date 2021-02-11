@@ -1,11 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { CSSTransition } from "react-transition-group";
-import LoaderSpinner from "../../loader/Loader";
-import ContactForm from "../../contactForm/ContactForm";
-import Filter from "../../filter/Filter";
-import ContactList from "../../contactList/ContactList";
-import { getContacts, loading } from "../../../redux/selectors/formSelectors";
+import LoaderSpinner from "../../components/loader/Loader";
+import ContactForm from "../../components/contactForm/ContactForm";
+import Filter from "../../components/filter/Filter";
+import ContactList from "../../components/contactList/ContactList";
+import { getContacts, loading } from "../../redux/selectors/formSelectors";
 import ContactsStyled from "./ContactsPageStyled";
 
 const ContactsPage = () => {

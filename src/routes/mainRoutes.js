@@ -6,9 +6,7 @@ const mainRoutes = [
     name: "Home",
     exact: true,
     component: lazy(() =>
-      import(
-        "../components/page/home/HomePage" /* webpackChunkName: "HomePage"*/
-      )
+      import("../page/home/HomePage" /* webpackChunkName: "HomePage"*/)
     ),
     isPrivate: false,
     restricted: false,
@@ -20,7 +18,7 @@ const mainRoutes = [
     exact: false,
     component: lazy(() =>
       import(
-        "../components/page/contacts/ContactsPage" /* webpackChunkName: "ContactsPage"*/
+        "../page/contacts/ContactsPage" /* webpackChunkName: "ContactsPage"*/
       )
     ),
     isPrivate: true,
@@ -32,7 +30,7 @@ const mainRoutes = [
     exact: false,
     component: lazy(() =>
       import(
-        "../components/page/register/RegistrPage" /* webpackChunkName: "RegistrPage"*/
+        "../page/register/RegistrPage" /* webpackChunkName: "RegistrPage"*/
       )
     ),
     isPrivate: false,
@@ -43,9 +41,7 @@ const mainRoutes = [
     name: "Login",
     exact: false,
     component: lazy(() =>
-      import(
-        "../components/page/login/LoginPage" /* webpackChunkName: "LoginPage"*/
-      )
+      import("../page/login/LoginPage" /* webpackChunkName: "LoginPage"*/)
     ),
     isPrivate: false,
     restricted: true,
