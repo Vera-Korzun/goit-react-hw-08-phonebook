@@ -1,6 +1,19 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
+  display: flex;
+  margin: 0 auto;
+  .user-menu {
+    //align-items: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.63;
+    color: #008080;
+  }
+  .user-menu-name {
+    font-weight: 500;
+    text-transform: uppercase;
+  }
   .user-menu-btn {
     display: inline-block;
     font-weight: 500;
