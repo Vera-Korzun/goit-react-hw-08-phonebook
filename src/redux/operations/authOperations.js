@@ -36,7 +36,7 @@ const signInOperation = (user) => async (dispatch) => {
     // if (error.response.data.error.message === "400") {
 
     // }
-    console.log("error ===>>>>>", error.response.data.error.code);
+
     dispatch(signInError(error.response.data.error.code));
   }
 };
