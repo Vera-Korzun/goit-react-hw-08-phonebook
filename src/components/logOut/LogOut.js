@@ -1,13 +1,14 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { signOutSuccess } from "../../redux/actions/authActions";
+//import { signOutSuccess } from "../../redux/actions/authActions";
+import { signOutOperation } from "../../redux/operations/authOperations";
 import LogOutStyled from "./LogOutStyled";
 
 const LogOut = () => {
   const dispatch = useDispatch();
 
   const onLogOutClick = () => {
-    dispatch(signOutSuccess());
+    dispatch(signOutOperation());
   };
 
   return (

@@ -5,9 +5,7 @@ import {
   signUpError,
   signUpRequest,
   signUpSuccess,
-  signOutRequest,
   signOutSuccess,
-  signOutError,
   signInSuccess,
 } from "../actions/authActions";
 
@@ -39,4 +37,8 @@ const signInOperation = (user) => async (dispatch) => {
   }
 };
 
-export { signUpOperation, signInOperation };
+const signOutOperation = () => async (dispatch) => {
+  dispatch(signOutSuccess());
+};
+
+export { signUpOperation, signInOperation, signOutOperation };
