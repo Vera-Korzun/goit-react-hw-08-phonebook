@@ -8,12 +8,6 @@ const HomePage = () => {
   return (
     <HomePageStyled>
       <h2 className="home-page__title">Welcome to the phonebook</h2>
-      {/* {isAuth && (
-        <h2 className="home-page__title">
-            Welcome to the your</h2> 
-           <Link to="/contacts">Phonebook</Link>
-        
-        )} */}
     </HomePageStyled>
   );
 };
