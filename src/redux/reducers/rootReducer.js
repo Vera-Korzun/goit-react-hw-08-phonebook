@@ -9,6 +9,7 @@ const authPersistConfig = {
   storage,
   whitelist: [
     "email",
+    "name",
     "idToken",
     "refreshToken",
     "isAuth",

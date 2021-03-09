@@ -11,12 +11,15 @@ const Header = () => {
 
   return (
     <HeaderStyled>
-      <div className="header">
-        <ul className="header__list">
-          {mainRoutes.map((route) => (
-            <NavigationItem {...route} key={route.path} />
-          ))}
-        </ul>
+      <div className={isAuth ? "header__auth" : "header"}>
+        <div>
+          <ul className="header__list">
+            {mainRoutes.map((route) => (
+              <NavigationItem {...route} key={route.path} />
+            ))}
+          </ul>
+        </div>
+
         {isAuth && <LogOut />}
       </div>
     </HeaderStyled>

@@ -13,6 +13,7 @@ import {
 
 const initialState = {
   email: "",
+  name: "",
   idToken: "",
   refreshToken: "",
   isAuth: false,
@@ -29,6 +30,7 @@ const authReducer = createReducer(
     [signUpSuccess]: (state, action) => ({
       ...state,
       email: action.payload.email,
+      //name: action.payload.name,
       idToken: action.payload.idToken,
       refreshToken: action.payload.refreshToken,
       isAuth: true,
@@ -46,6 +48,7 @@ const authReducer = createReducer(
     [signInSuccess]: (state, action) => ({
       ...state,
       email: action.payload.email,
+      //name: action.payload.name,
       idToken: action.payload.idToken,
       refreshToken: action.payload.refreshToken,
       isAuth: true,

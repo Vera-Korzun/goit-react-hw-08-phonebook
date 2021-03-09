@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   display: flex;
-  margin: 0 auto;
+  //margin: 0 auto;
+
   .user-menu {
     //align-items: center;
     font-weight: 400;

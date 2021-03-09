@@ -4,6 +4,7 @@ import { signUpOperation } from "../../redux/operations/authOperations";
 import LoginStyled from "../login/LoginStyled";
 
 const initialState = {
+  //name: "",
   email: "",
   password: "",
 };
@@ -27,6 +28,17 @@ const SignUp = () => {
     <LoginStyled>
       <h2 className="login__title">Sign Up</h2>
       <form className="login__form" onSubmit={onHandleSubmit}>
+        {/* <label className="login__form-label">
+          Name
+          <input
+            className="login__form-input"
+            type="text"
+            name="name"
+            placeholder="Enter name"
+            value={state.name}
+            onChange={onHandleChange}
+          />
+        </label> */}
         <label className="login__form-label">
           Email
           <input
